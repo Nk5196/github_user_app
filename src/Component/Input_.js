@@ -27,7 +27,7 @@ const Input_ = () => {
     return (
         <> <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
         <Box className='Box1' p={{ base: '4', md: '8' }} flex={{ base: '1', md: '1' }}>
-            <Input w='100%' placeholder='Enter Github Username' color={'black'} value={username}
+            <Input w='100%' placeholder='Username' color={'black'} value={username}
                 onChange={(e) => setUsername(e.target.value)} />
             <Button mt={2} onClick={gitData}>Get User Info</Button>
         </Box>
