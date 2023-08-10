@@ -3,11 +3,34 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider } from '@chakra-ui/react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Input_ from './Component/Input_';
+
+
+const appRouter = createBrowserRouter([{
+  path: "/",
+  element: <App />,
+  children: [
+    {
+      path: "/",
+      element: <Input_ />
+    },
+  
+
+  ]
+}]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <ChakraProvider> 
+    <RouterProvider router={appRouter}>
+        
+        <appRouter />
+     
+    </RouterProvider>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
