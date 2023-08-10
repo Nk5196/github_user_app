@@ -27,9 +27,9 @@ const Input_ = () => {
     return (
         <> <Box display="flex" flexDirection={{ base: 'column', md: 'row' }}>
         <Box className='Box1' p={{ base: '4', md: '8' }} flex={{ base: '1', md: '1' }}>
-            <Input w='100%' placeholder='Username' color={'black'} value={username}
+            <Input mb={2} w='300px' placeholder='Username' color={'black'} value={username}
                 onChange={(e) => setUsername(e.target.value)} />
-            <Button mt={2} onClick={gitData}>Get User Info</Button>
+            <Button mt={0} onClick={gitData}>Get User Info</Button>
         </Box>
         <Box className='Box2' p={{ base: '4', md: '8' }} flex={{ base: '1', md: '1' }}>
            
